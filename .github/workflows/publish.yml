@@ -21,5 +21,4 @@ jobs:
           version: latest
         run: |
             docker build . --tag ghcr.io/$username/$imagename:$version
-            docker run ghcr.io/$username/$imagename:$version
             docker push ghcr.io/$username/$imagename:$version
