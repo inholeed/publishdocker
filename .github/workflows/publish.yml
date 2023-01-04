@@ -17,8 +17,8 @@ jobs:
       - name: Build the hello-docker Docker image
         env:
           username: ${{ github.actor }}
-          imagename: publishdocker
-          version: 0.0.4
+          imagename: othername
+          version: latest
         run: |
             docker build . --tag ghcr.io/$username/$imagename:$version
             docker run ghcr.io/$username/$imagename:$version
