@@ -18,7 +18,8 @@ jobs:
         env:
           username: ${{ github.actor }}
           imagename: publishdocker
+          version: latest
         run: |
-            docker build . --tag ghcr.io/$username/$imagename:0.0.2
-            docker run ghcr.io/$username/$imagename:0.0.2
-            docker push ghcr.io/$username/$imagename:0.0.2
+            docker build . --tag ghcr.io/$username/$imagename:$version
+            docker run ghcr.io/$username/$imagename:$version
+            docker push ghcr.io/$username/$imagename:$version
